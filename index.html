@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+      :root {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        color: hsl(234, 12%, 34%);
+        font-weight: 400;
+        line-height: 1.5rem;
+      }
+      .w200 {
+        font-weight: 200;
+      }
+      .w600 {
+        font-weight: 600;
+      }
+      .grayish {
+        color: hsl(229, 6%, 66%);
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        height: 100vh;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+      header {
+        width: 500px;
+        margin: auto;
+      }
+      article {
+         width: 1000px;
+        display: grid;
+        grid-template: 1fr /1fr 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+      }
+      .card-team-kar {
+        display: flex;
+        flex-direction: column;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 200px;
+        padding: 1rem;
+        margin-top: 2rem;
+        text-align: start;
+        background-color: hsl(0, 0%, 98%);
+
+        box-shadow: 0px 10px 5px 1px hsla(213, 54%, 44%, 0.162);
+        border-radius: 0.5rem;
+      }
+      .supervisor {
+        border-top: 5px solid hsl(180, 62%, 55%);
+      }
+      .team {
+        border-top: 5px solid hsl(0, 78%, 62%);
+      }
+      .karma {
+        border-top: 5px solid hsl(34, 97%, 64%);
+      }
+      .calculator {
+        border-top: 5px solid hsl(212, 86%, 64%);
+      }
+      .picture {
+        margin: 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .attribution {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          display: flex;
+          flex-direction: row;
+        }
+
+        header {
+          width: 100vw; 
+          min-width: 365px;
+          margin: auto;
+        }
+
+        article {  
+          width: 95vw; 
+          display: grid;
+          grid-template: 1fr /1fr; 
+          margin: auto;
+        }
+        .card {
+          margin-top: 1rem;
+        }
+        .card-team-kar {
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="grayish w200">Reliable, efficient delivery</h1>
+        <h1 class="w600">Powered by Technology</h1>
+        <div class="grayish">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </div>
+      </header>
+      <article>
+        <div class="card supervisor">
+          <h2>Supervisor</h2>
+          <div class="grayish">
+            Monitors activity to identify project roadblocks
+          </div>
+          <div class="picture">
+            <img src="./images/icon-supervisor.svg" alt="" />
+          </div>
+        </div>
+        <div class="card-team-kar">
+          <div class="card team">
+            <h2>Team Builder</h2>
+            <div class="grayish">
+              Scans our talent network to create the optimal team for your
+              project
+            </div>
+            <div class="picture">
+              <img src="./images/icon-team-builder.svg" alt="" />
+            </div>
+          </div>
+          <div class="card karma">
+            <h2>Karma</h2>
+            <div class="grayish">
+              Regularly evaluates our talent to ensure quality
+            </div>
+            <div class="picture">
+              <img src="./images/icon-karma.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="card calculator">
+          <h2>Calculator</h2>
+          <div class="grayish">
+            Uses data from past projects to provide better delivery estimates
+          </div>
+          <div class="picture">
+            <img src="./images/icon-calculator.svg" alt="" />
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Supakorn Klampod</a>.
+      </p>
+    </footer>
+  </body>
+</html>
